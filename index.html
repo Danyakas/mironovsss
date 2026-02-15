@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dzīvokļa īre — aprēķins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Dzīvokļa īres kalkulators</h1>
+
+    <p class="lead">
+      Aprēķini īres kopējo maksu pēc ilguma. Izvēlies dzīvokļa lielumu, norādi mēnešu skaitu un izvēlies papildus pakalpojumus.
+    </p>
+
+    <section class="card">
+      <form id="rentForm" novalidate>
+        <div class="field">
+          <label for="type">Dzīvokļa tips</label>
+          <select id="type" name="type" required>
+            <option value="">-- Izvēlies --</option>
+            <option value="studio">Studija — 300 €/mēn</option>
+            <option value="one">1 istaba — 450 €/mēn</option>
+            <option value="two">2 istabas — 600 €/mēn</option>
+          </select>
+          <div id="typeError" class="error" aria-live="polite"></div>
+        </div>
+
+        <div class="field">
+          <label for="months">Nomas periods (mēneši)</label>
+          <input id="months" name="months" type="number" min="1" placeholder="Piem., 1, 6, 12" required />
+          <div id="monthsError" class="error" aria-live="polite"></div>
+        </div>
+
+        <fieldset class="field">
+          <legend>Papildus pakalpojumi</legend>
+          <label><input type="checkbox" id="cleaning" name="services" value="cleaning"> Mājas kopšana (20 €/mēn)</label><br>
+          <label><input type="checkbox" id="parking" name="services" value="parking"> Stāvvieta (50 €/mēn)</label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn">Aprēķināt</button>
+          <button type="button" id="resetBtn" class="btn secondary">Notīrīt</button>
+        </div>
+      </form>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
