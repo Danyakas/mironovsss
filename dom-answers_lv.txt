@@ -1,0 +1,18 @@
+1. Kādus kļūdainas ievades gadījumus Tu pārbaudi:
+- Tukšs dzīvokļa tips (nav izvēlēts).
+- Tukšs vai nulle/negatīvs mēnešu skaits.
+- Mēnešu skaits nav veselais skaitlis (piem., 3.5).
+- Nepareizi formatēta ievade (lai gan months lauks ir number, papildus pārbaude tiek veikta JS pusē).
+
+2. Kāpēc tieši šie gadījumi ir būtiski:
+- Nepilnīga vai nepareiza ievade novedīs pie nepareiziem aprēķiniem vai servera kļūdām, ja dati tiks nosūtīti.
+- Lietotājam jāsaņem skaidra atgriezeniskā saite, lai viņš varētu pareizi aizpildīt formu un saņemt korektu aprēķinu.
+- Šie gadījumi segs visbiežāk sastopamās kļūdas no lietotāja puses un uzlabos datu kvalitāti.
+
+3. Kā izvēlētā validācija uzlabo lietotāja pieredzi un produkta kvalitāti:
+- Klienta pusē validācija nodrošina tūlītēju atgriezenisko saiti, samazinot laiku, kas nepieciešams, lai novērstu kļūdas.
+- Samazina nederīgu pieprasījumu skaitu, kas nonāk serverī (ja būtu backend).
+- Skaidri kļūdu ziņojumi palīdz lietotājam ātri saprast nepieciešamās izmaiņas, palielinot veiksmīgu iesniegumu skaitu.
+
+Papildu piezīme:
+- Atlaides loģika ir viegli paplašināma: var pievienot jaunas atlaides objektā `discounts`, izmainīt atlaides procents vai pievienot īpašas sezonas atlaides.
